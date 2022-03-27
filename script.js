@@ -1,7 +1,6 @@
  // create function currentSum
  // method reduce
- const numbers = [27, 03, 12, 55];
- let value = numbers.reduce((sum, current) => sum + current, 0);
+const sum = [27, 03, 28, 11].reduce((partialSum, a) => partialSum + a, 0);
 
  // create a function for returning from the first pieces of this string
  let str = "To be or not to be";
