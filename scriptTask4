@@ -25,6 +25,25 @@ Examples
 [5, 8, 6, 3, 4]  =>  [3, 8, 6, 5, 4]
 [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]  =>  [1, 8, 3, 6, 5, 4, 7, 2, 9, 0]*/
 
+function recursiceSum(n) {
+    const chars = 0;
+    let result = 0;
+    let count = 0;
+    do {
+        n.split('');
+    } while (n % 2 === 0)
+
+    for (let i = 0; i < n.length; i++) {
+        chars.reduce(partialSum, a);
+        return chars;
+    }
+    //return chars;
+
+    result = Math.floor(Math.random() * (10 - 1 + 1) + 1);
+    count++;
+    randomUntilFive(result, count);
+
+}
 /* 4. What is an anagram? Well, two words are anagrams of each other if they both contain the same letters. For example:
 
 'abba' & 'baab' == true
