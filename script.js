@@ -3,8 +3,10 @@
 const sum = [27, 03, 28, 11].reduce((partialSum, a) => partialSum + a, 0);
 
  // create a function for returning from the first pieces of this string
- let str = "To be or not to be";
- array.filter(function(0, str), 0);
+function TheFirstChar(arr) {
+     arr.split(' ').filter((char, index) => newString[index] = char[0]);
+     return newString;
+ }
 
  // create a function changeArray for changing a half of arrays
  //Создать функцию changeArray, которая будет менять местами половины массивов, 
@@ -14,12 +16,12 @@ const sum = [27, 03, 28, 11].reduce((partialSum, a) => partialSum + a, 0);
  //а половины меняются местами.
  const animals = ['ant', 'bison', 'camel', 'duck', 'elephant', 'bird'];
 
- function changeArray() {
-     let firstPiece = animals.slice(0, 2);
-     let secondPiece = animals.slice(3, 5);
-     if (array.half.length % 2 == 0) {
-         animals.copyWithin();
+ function changeArray(animals) {
+     let key = animals.Math.ceil(animals / 2) - 1;
+     if (key % 2 === 0) {
+         animals.slice(key + 1).concat(animals[key].arrayOf.slice(0, key));
      } else {
-         animals.copyWithin();
-     };
+         animals.slice(key + 1).concat(animals[key].arrayOf.slice(0, key + 1));
+     }
+     return animals;
  }
