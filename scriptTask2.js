@@ -16,11 +16,8 @@ function compress(str) {
     }
 }
 
-function uncompress(str) {
-    let cout = 0;
-    for(let i = 0; i < str.length; i++){
-        
-    }
+function uncompress(str,n) {
+    return str.repeat(n);
 }
 
 /* create function countVowelLetters for returning count of russian char from the string
