@@ -5,7 +5,12 @@ sum(1)(2)(3) == 6; // 1 + 2 + 3
 sum(5)(-1)(2) == 6
 sum(6)(-1)(-2)(-3) == 0
 sum(0)(1)(2)(3)(4)(5) == 15 */
-console.log([-1, -2, 3].reduce((a, b) => a + b, 0));
+
+function sum(a, b) {
+    return a + b;
+}
+let curriedSum = _.curry(sum);
+console.log(curriedSum(1)(2));
 
 /* 2. Digital root is the recursive sum of all the digits in a number.
 
