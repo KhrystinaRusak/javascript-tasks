@@ -22,14 +22,25 @@ console.write(array);
  // а первая на место второй; если количество элементов нечетное, тогда элемент массива, 
  // который является серединой остается на месте,
  //а половины меняются местами.
- const animals = ['ant', 'bison', 'camel', 'duck', 'elephant', 'bird'];
+
+ //const animals = ['ant', 'bison', 'camel', 'duck', 'elephant', 'bird'];
+
+  const animals = ['bison', 'camel', 'duck', 'elephant', 'bird'];
 
  function changeArray(animals) {
-     let key = animals.Math.ceil(animals / 2) - 1;
-     if (key % 2 === 0) {
-         animals.slice(key + 1).concat(animals[key].arrayOf.slice(0, key));
+     const key = Math.floor(animals.length / 2);
+
+     if (animals.length % 2 === 0) {
+         //animals.slice(key + 1).concat(animals[key].arrayOf.slice(0, key));
+
+         const arr = [...animals.slice(key), ...animals.slice(0, key)];
+         return arr;
      } else {
-         animals.slice(key + 1).concat(animals[key].arrayOf.slice(0, key + 1));
+         //animals.slice(key + 1).concat(animals[key].arrayOf.slice(0, key + 1));
+         const centre = animals[key];
+         const arr = [...animals.slice(key + 1), centre, ...animals.slice(0, key)];
+         return arr
      }
-     return animals;
+
  }
+ console.log(changeArray(animals));
