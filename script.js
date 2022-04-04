@@ -3,10 +3,18 @@
 const sum = [27, 03, 28, 11].reduce((partialSum, a) => partialSum + a, 0);
 
  // create a function for returning from the first pieces of this string
-function TheFirstChar(arr) {
-     arr.split(' ').filter((char, index) => newString[index] = char[0]);
-     return newString;
- }
+let str = "Каждый охотник желает знать, где сидит фазан.";  
+
+function firstChar(value, index, arr) {  
+    if (index == 0)  
+        return true;  
+    else  
+        return arr[index - 1] === " ";  
+}  
+
+const array = [].filter.call(str, firstChar);  
+
+console.write(array); 
 
  // create a function changeArray for changing a half of arrays
  //Создать функцию changeArray, которая будет менять местами половины массивов, 
