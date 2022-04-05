@@ -9,12 +9,25 @@ compress("aaa");
 Результат: “a3”
 */
 function compress(str) {
-    let cout = 0;
-    for(let i = 0; i < str.length; i++){
-        
-        
+    if (str.length <= 1) {
+        return str;
     }
-}
+    let obj = {};
+    let str1 = "";
+    for (let i = 0; i < str.length; i++) {
+        const letter = str[i];
+        if (!(letter in obj)) {
+            obj[letter] = 1;
+        } else {
+            obj[letter]++;
+        }
+    }
+    for (const elem in obj) {
+        str1 += `${elem}${obj[elem]}`;
+    }
+    return str1;
+};
+
 
 function uncompress(str,n) {
     return str.repeat(n);
