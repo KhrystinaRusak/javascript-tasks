@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>The Weather App</title>
+</head>
+
+<body>
+
+    <section class="top_banner">
+        <div class="container">
+            <h1 class="heading">The Weather App</h1>
+            <form>
+                <input type="text" placeholder="Search for a city" autofocus>
+                <button type="submit">SUBMIT</button>
+                <span class="msg"></span>
+            </form>
+        </div>
+    </section>
+    <section class="ajax_section">
+        <div class="container">
+            <ul class="cities">
+                <li class="city">
+                    <h2 class="city_name" data_name="...">
+                        <span>...</span>
+                        <sup>...</sup>
+                    </h2>
+                    <span class="city_temp">...<sup>°C</sup></span>
+                    <figure>
+                        <img src="icons/smart_city.png" alt="city_icon" class="city_icon">
+                        <figcaption>...</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
