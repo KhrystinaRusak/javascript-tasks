@@ -1,0 +1,17 @@
+body,
+h1,
+h5 {
+    font-family: "Raleway", sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.bgimg {
+    background-image: url('https://diningtablesandchairs.eu/wp-content/uploads/2018/09/gordonramsey.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
