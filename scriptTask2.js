@@ -29,10 +29,14 @@ function compress(str) {
 };
 
 
-function uncompress(str,n) {
-    return str.repeat(n);
+function uncompress(str, n) {
+    let k = 0;
+    let strRes = '';
+    for (let i = 0; i < str.length; i += 2) {
+        strRes += str[i].repeat(str[i + 1]), [','];
+    }
+    return strRes;
 }
-
 /* create function countVowelLetters for returning count of russian char from the string
 countVowelLetters, которая будет возвращать количество русских гласных букв в строке,
 которая будет являться аргументом функции. Не использовать switch, вложенные циклы,
