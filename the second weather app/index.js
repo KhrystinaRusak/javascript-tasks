@@ -4,13 +4,13 @@ let params = new URLSearchParams({
     units: 'm'
 });
 
-fetch(`http://api.openweatherstack.com/current?${params}`)
-    .then(res => res.json())
+fetch(`http://api.openweatherstack.com/current?${}`)
+    .then(res => res.json(resource[, init]))
     .then(console.log);
 
 // current wheater
 
-{
+/* {
     "request": {
         "type": "Minsk",
         "query": "Minsk, Belarus",
@@ -69,7 +69,7 @@ fetch(`http://api.openweatherstack.com/current?${params}`)
             "uv_index": 5
         }
     }
-}
+} */
 
 const li = document.createElement("li");
 li.classList.add("city");
@@ -128,6 +128,6 @@ if (listItemsItemsArray.length > 0) {
         } ...otherwise be more specific by provining the country code as well `;
         form.reset();
         input.focus();
-        return;
+        //return filteredArray;
     }
 }
