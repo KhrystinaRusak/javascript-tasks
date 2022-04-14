@@ -52,11 +52,11 @@ function VowellLetters(str) {
  Каждое последующее число является суммой двух предыдущих. */
 function isFib(n) {
     if (n === 1) {
-        return [1];
+        return [0, 1];
     } else {
         let arr = isFib(n - 1);
-        arr.push(arr[arr.length - 1] + arr[arr.length - 2]);
-        return arr.slice(0, n);
+        arr = [...arr, arr[arr.length - 1] + arr[arr.length - 2]];
+        return arr;
     }
 }
 
