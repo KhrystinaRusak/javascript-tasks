@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Погода</title>
+</head>
+
+<body>
+
+    <!-- <div class="wrapper">
+        <select id="selectCities"></select>
+    </div>
+
+    <div class="weather-forecast" id="weather-forecast" hidden>
+        <div class="weather-forecast-item" id="weather-forecast-item">
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" id="imgWeatherDay" />
+            <div class="dayWeek" id="dayWeek">Понедельник</div>
+            <div id="temperatureDay">Температура воздуха : 5 °С</div>
+            <div id="humidityDay">Влажность : 55 %</div>
+            <div id="windDay">Скорость ветра : 6 м/c</div>
+        </div>
+        <div class="weather-forecast-item" id="weather-forecast-item">
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" id="imgWeatherDay" />
+            <div class="dayWeek" id="dayWeek">Вторник</div>
+            <div id="temperatureDay">Температура воздуха : 4 °С</div>
+            <div id="humidityDay">Влажность : 77 %</div>
+            <div id="windDay">Скорость ветра : 6 м/c</div>
+        </div>
+        <div class="weather-forecast-item" id="weather-forecast-item">
+            <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="weather icon" id="imgWeatherDay" />
+            <div class="dayWeek" id="dayWeek">Среда</div>
+            <div id="temperatureDay">Температура воздуха : 6 °С</div>
+            <div id="humidityDay">Влажность : 66 %</div>
+            <div id="windDay">Скорость ветра : 11 м/c</div>
+        </div>
+        <div class="weather-forecast-item" id="weather-forecast-item">
+            <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="weather icon" id="imgWeatherDay" />
+            <div class="dayWeek" id="dayWeek">Четверг</div>
+            <div id="temperatureDay">Температура воздуха : 10 °С</div>
+            <div id="humidityDay">Влажность : 41 %</div>
+            <div id="windDay">Скорость ветра : 7 м/c</div>
+        </div>
+        <div class="weather-forecast-item" id="weather-forecast-item">
+            <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="weather icon" id="imgWeatherDay" />
+            <div class="dayWeek" id="dayWeek">Пятница</div>
+            <div id="temperatureDay">Температура воздуха : 7 °С</div>
+            <div id="humidityDay">Влажность : 58 %</div>
+            <div id="windDay">Скорость ветра : 8 м/c</div>
+        </div>
+
+        <div class="weather-forecast-item" id="weather-forecast-item">
+            <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="weather icon" id="imgWeatherDay" />
+            <div class="dayWeek" id="dayWeek">Суббота</div>
+            <div id="temperatureDay">Температура воздуха : 7 °С</div>
+            <div id="humidityDay">Влажность : 58 %</div>
+            <div id="windDay">Скорость ветра : 8 м/c</div>
+        </div>
+
+        <div class="weather-forecast-item" id="weather-forecast-item">
+            <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="weather icon" id="imgWeatherDay" />
+            <div class="dayWeek" id="dayWeek">Воскресенье</div>
+            <div id="temperatureDay">Температура воздуха : 7 °С</div>
+            <div id="humidityDay">Влажность : 58 %</div>
+            <div id="windDay">Скорость ветра : 8 м/c</div>
+        </div>
+         -->
+    <section class="top_banner">
+        <div class="container">
+            <h1 class="heading">Приложение погода</h1>
+            <form>
+                <input type="text" placeholder="Поиск города" autofocus>
+                <button type="submit">Найти</button>
+                <span class="msg"></span>
+            </form>
+        </div>
+    </section>
+
+    <section class="ajax_section">
+
+        <div class="container">
+            <ul class="cities">
+                <li class="city">
+                    <h2 class="city_name" data_name="...">
+                        <spon><img src="" alt="weather icon" id="imgWeatherDay" /></spon>
+                    </h2>
+                    <figure>
+                        <figcaption>
+                            <span>
+                                <div class="dayWeek" id="dayWeek">Понедельник</div>
+                                <div id="temperatureDay">Температура воздуха : 7 °С</div>
+                                <div id="humidityDay">Влажность : 58 %</div>
+                                <div id="windDay">Скорость ветра : 8 м/c</div>
+                                </span>
+                            <img src="icons/smart_city.png" alt="city_icon" class="city_icon">
+                        </figcaption>
+                    </figure>
+                </li>
+
+                <li class="city">
+                    <h2 class="city_name" data_name="...">
+                        <spon><img src="" alt="weather icon" id="imgWeatherDay" /></spon>
+                    </h2>
+                    <figure>
+                        <figcaption>
+                            <span>
+                                <div class="dayWeek" id="dayWeek">Вторник</div>
+                                <div id="temperatureDay">Температура воздуха : 7 °С</div>
+                                <div id="humidityDay">Влажность : 58 %</div>
+                                <div id="windDay">Скорость ветра : 8 м/c</div>
+                                </span>
+                            <img src="icons/smart_city.png" alt="city_icon" class="city_icon">
+                        </figcaption>
+                    </figure>
+                </li>
+
+                <li class="city">
+                    <h2 class="city_name" data_name="...">
+                        <spon><img src="" alt="weather icon" id="imgWeatherDay" /></spon>
+                    </h2>
+                    <figure>
+                        <figcaption>
+                            <span>
+                                <div class="dayWeek" id="dayWeek">Среда</div>
+                                <div id="temperatureDay">Температура воздуха : 7 °С</div>
+                                <div id="humidityDay">Влажность : 58 %</div>
+                                <div id="windDay">Скорость ветра : 8 м/c</div>
+                                </span>
+                            <img src="icons/smart_city.png" alt="city_icon" class="city_icon">
+                        </figcaption>
+                    </figure>
+                </li>
+
+                <li class="city">
+                    <h2 class="city_name" data_name="...">
+                        <spon><img src="" alt="weather icon" id="imgWeatherDay" /></spon>
+                    </h2>
+                    <figure>
+                        <figcaption>
+                            <span>
+                                <div class="dayWeek" id="dayWeek">Четверг</div>
+                                <div id="temperatureDay">Температура воздуха : 7 °С</div>
+                                <div id="humidityDay">Влажность : 58 %</div>
+                                <div id="windDay">Скорость ветра : 8 м/c</div>
+                                </span>
+                            <img src="icons/smart_city.png" alt="city_icon" class="city_icon">
+                        </figcaption>
+                    </figure>
+                </li>
+
+                <li class="city">
+                    <h2 class="city_name" data_name="...">
+                        <spon><img src="" alt="weather icon" id="imgWeatherDay" /></spon>
+                    </h2>
+                    <figure>
+                        <figcaption>
+                            <span>
+                                <div class="dayWeek" id="dayWeek">Пятница</div>
+                                <div id="temperatureDay">Температура воздуха : 7 °С</div>
+                                <div id="humidityDay">Влажность : 58 %</div>
+                                <div id="windDay">Скорость ветра : 8 м/c</div>
+                                </span>
+                            <img src="icons/smart_city.png" alt="city_icon" class="city_icon">
+                        </figcaption>
+                    </figure>
+                </li>
+
+                <li class="city">
+                    <h2 class="city_name" data_name="...">
+                        <spon><img src="" alt="weather icon" id="imgWeatherDay" /></spon>
+                    </h2>
+                    <figure>
+                        <figcaption>
+                            <span>
+                                <div class="dayWeek" id="dayWeek">Суббота</div>
+                                <div id="temperatureDay">Температура воздуха : 7 °С</div>
+                                <div id="humidityDay">Влажность : 58 %</div>
+                                <div id="windDay">Скорость ветра : 8 м/c</div>
+                                </span>
+                            <img src="icons/smart_city.png" alt="city_icon" class="city_icon">
+                        </figcaption>
+                    </figure>
+                </li>
+
+                <li class="city">
+                    <h2 class="city_name" data_name="...">
+                        <spon><img src="" alt="weather icon" id="imgWeatherDay" /></spon>
+                    </h2>
+                    <figure>
+                        <figcaption>
+                            <span>
+                                <div class="dayWeek" id="dayWeek">Воскресенье</div>
+                                <div class="sunrise" id="sunrise">
+                                    <span>
+                                        <img src="icons/sunrise.png" alt="sunrise">
+                                    </span>
+        </div>
+        <div class="sunset" id="sunset">
+            <span>
+                                        <img src="icons/sunset.png" alt="sunset">
+                                    </span>
+        </div>
+        <div id="temperatureDay">Температура воздуха : 7 °С</div>
+        <div id="humidityDay">Влажность : 58 %</div>
+        <div id="windDay">Скорость ветра : 8 м/c</div>
+        </span>
+        <img src="icons/smart_city.png" alt="city_icon" class="city_icon">
+        </figcaption>
+        </figure>
+        </li>
+        </ul>
+        </div>
+
+    </section> -->
+
+    <script src="index.js"></script>
+</body>
+
+</html>
