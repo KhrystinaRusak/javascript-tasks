@@ -50,12 +50,14 @@ function VowellLetters(str) {
 /* Напишите программу на JavaScript, чтобы получить первые n чисел Фибоначчи.
 Примечание: Последовательность Фибоначчи - это последовательность чисел: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34,...
  Каждое последующее число является суммой двух предыдущих. */
-function fib(n) {
-    if (n == 0) {
-        return 0;
-    } else if (n == 1) {
-        return 1;
+function isFib(n) {
+    if (n === 1) {
+        return [1];
     } else {
-        return fib(n - 1) + fib(n - 2);
+        let arr = isFib(n - 1);
+        arr.push(arr[arr.length - 1] + arr[arr.length - 2]);
+        return arr.slice(0, n);
     }
 }
+
+console.log(isFib(3));
