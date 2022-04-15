@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <title>Cafe</title>
+</head>
+
+<body>
+
+    <div class="bgimg w3-display-container w3-text-white">
+        <div class="w3-display-middle w3-jumbo">
+            <p>Logo</p>
+        </div>
+        <div class="w3-display-topleft w3-container w3-xlarge">
+            <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-black">Меню</button></p>
+            <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-black">Контакты</button></p>
+        </div>
+
+    </div>
+
+    <!-- Menu Modal -->
+    <div id="menu" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom">
+            <div class="w3-modal-container w3-black w3-display-container">
+                <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+                <h1>Закуски</h1>
+            </div>
+            <div class="w3-container">
+                <h5>Салат "Греческий" <b>$5</b></h5>
+                <h5>Бутерброды <b>$7</b></h5>
+            </div>
+            <div class="w3-container w3-black">
+                <h1>Главные блюда</h1>
+            </div>
+            <div class="w3-container">
+                <h5>Рыба на гриле с гарниром из картофеля <b>$8.50</b></h5>
+                <h5>Итальянская пицца <b>$5.50</b></h5>
+                <h5>Вегетарианская пицца <b>$4.00</b></h5>
+                <h5>Курица с картошкой по-деревенски <b>$6.50</b></h5>
+                <h5>Бургер <b>$5.00</b></h5>
+            </div>
+            <div class="w3-container w3-black">
+                <h1>Десерты</h1>
+            </div>
+            <div class="w3-container">
+                <h5>Фруктовыу салат <b>$3</b></h5>
+                <h5>Мороженое <b>$4</b></h5>
+                <h5>Шоколадный пирог <b>$5.50</b></h5>
+                <h5>Сырная тарелка <b>$6.50</b></h5>
+            </div>
+            <div class=" w3-container coctail w3-black">
+
+                <h1>Коктели</h1>
+            </div>
+            <div class="w3-container">
+
+                <!-- <h5>Coctail Pelican</h5>
+                <h5>Coctail Margarita</h5> -->
+                <div class="custom-select w3-container" style="width:200px; ">
+                    <!-- <select>
+                        <option value="0">Выбрать коктель:</option>
+                        <option value="1"><a href="#">Маргарита</a></option>
+                        <option value="2"><a href="#">Пеликан</a></option>
+                    </select> -->
+                    <div id="myBtnContainer">
+                        <button class="btn active" onclick="filterSelection('all')">Показать все рецепты</button>
+                        <button class="btn" onclick="filterSelection('pelican')"></button>
+                        <button class="btn" onclick="filterSelection('margarita')"></button>
+
+                    </div>
+
+                    <div class="container">
+                        <div class="filterCoctail">Pelican</div>
+                        <div class="filterCoctail">Margarita</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contact" class="w3-modal">
+        <div class="w3-modal_content w3-animate-zoom">
+            <div class="w3-container w3-black">
+                <span onclick="document.getElementById('contact').style.display='none'" class="w3-button w3-display_topright large">x</span>
+                <h1>Контакты</h1>
+
+                <div class="container">
+                    <p> Зарезервировать стол для трапезы, спросите о сегодняшнем дне или просто отправте нам сообщение:</p>
+                    <form action="/action_page.php" target="_blank">
+                        <p><input type="text" class="w3-input w3-padding-16 w3-border" placeholder="Имя" name="Name" required></p>
+                        <p><input type="number" class="w3-input w3-padding-16 w3-border" placeholder="Количество людей" name="People" required></p>
+                        <p><input type="datetime-local" class="w3-input w3-padding-16 w3-border" placeholder="Дата и время" name="date" value="2022-04-08T09:36" required></p>
+                        <p><input type="text" class="w3-input w3-padding-6 w3-border" placeholder="Сообщение\ Специальные возможности" name="Message" required></p>
+                        <p><button class="w3-button" type="submit">ОТПРАВИТЬ СООБЩЕНИЕ</button></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+</body>
+
+</html>
